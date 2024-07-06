@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+body {
+    background-image: url('backgroundimg.PNG'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+    z-index: 1;
+}
+.maintenance {
+    z-index: 2; /* Ensures that the content is above the overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+.text {
+    background: rgba(0, 0, 0, 0.5); /* Optional: for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
+}
+h1 {
+    margin: 10px 0;
+}
